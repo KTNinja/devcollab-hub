@@ -1,0 +1,31 @@
+{
+  "name": "devcollab-hub",
+  "version": "1.0.0",
+  "description": "Micro-Frontend Interview Project",
+  "scripts": {
+    "install-all": "npm run install-shell && npm run install-task && npm run install-notification && npm run install-collaboration && npm run install-shared && npm run install-backend",
+    "install-shell": "cd shell-app && npm install",
+    "install-task": "cd task-module && npm install", 
+    "install-notification": "cd notification-module && npm install",
+    "install-collaboration": "cd collaboration-module && npm install",
+    "install-shared": "cd shared-services && npm install",
+    "install-backend": "cd backend-api && npm install",
+    "dev": "concurrently \"npm run dev-shell\" \"npm run dev-task\" \"npm run dev-notification\" \"npm run dev-collaboration\" \"npm run dev-backend\"",
+    "dev-shell": "cd shell-app && npm start",
+    "dev-task": "cd task-module && npm start",
+    "dev-notification": "cd notification-module && npm start", 
+    "dev-collaboration": "cd collaboration-module && npm start",
+    "dev-backend": "cd backend-api && npm run dev",
+    "build": "npm run build-shell && npm run build-task && npm run build-notification && npm run build-collaboration",
+    "build-shell": "cd shell-app && npm run build",
+    "build-task": "cd task-module && npm run build",
+    "build-notification": "cd notification-module && npm run build",
+    "build-collaboration": "cd collaboration-module && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["micro-frontend", "react", "typescript", "module-federation"],
+  "author": "Your Name",
+  "license": "MIT"
+}
